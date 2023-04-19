@@ -1,0 +1,208 @@
+@font-face {
+    font-family: 'Coves';
+    src: url(../fonts/Coves-Bold/Coves\ Bold.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+/*Cores*/
+:root {
+    --preto: #000;
+    --azul_escuro: #04345C;
+    --azul_claro: #6BD4CD;
+    --roxo_detalhe: #BF46A0;
+}
+/*body*/
+
+html {
+    font-size: calc(16px + 0.390625vw);
+}
+
+body {
+    /* background-color: var(--verde_escuro); */
+    font-family: 'Coves';
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/*navbar*/
+.navbar {
+    transition: 0.4s;
+    /* background-color: #3c5e45cb; */
+    --bs-navbar-padding-y: 0.3rem;
+}
+
+.navbar-toggler-icon {
+    display: flex;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    background-image: url(../images/icone-menu.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+.ativo {
+    text-decoration: underline;
+    color: var(--roxo_detalhe)!important;
+}
+
+.navbar-nav a {
+    color: var(--azul_escuro);
+}
+
+.navbar-nav a:hover {
+    color: var(--roxo_detalhe);
+}
+
+
+
+/* Cabeçalho */
+#section_header{
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    background-color: var(--azul_escuro);
+}
+
+.ano_aluno{
+    font-size: 18px;
+    color: rgb(179, 179, 179) !important;
+}
+
+#section_header p{
+    color: whitesmoke;
+}
+
+#img_perfil_estudante {
+    margin-right: 1em;
+	background-color: var(--azul_claro);
+    border-radius: 50%;
+    height: 60px;
+}
+
+.titulo_materia {
+    display: flex;
+    justify-content: center;
+}
+
+/*Carrossel*/
+.img-carrossel {
+    object-fit: cover;
+    height: 23rem;
+    width: 100%;
+}
+
+#news_carrossel {
+    display: flex;
+    justify-content: center;
+    margin: 1em 0;
+}
+
+
+/* Playlists */
+.playlist{
+    width: 16rem;
+    margin: 1em;
+}
+
+.playlist img{
+    height: 10rem;
+    object-fit: cover;
+}
+
+/*iframes*/
+
+iframe {
+    transition: 0.5s;
+    width: 400px;
+    height: 220px;
+}
+
+.videos div {
+    margin: 1em 2em;
+}
+
+input[type=checkbox] {
+    position: relative;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border: solid;
+    border-radius: 50%;
+}
+
+/*Pare da ProgressBar*/
+
+#myProgress{
+	margin: auto;
+	width: 50%;
+	background-color: rgb(161, 161, 161);
+    border-radius: 20px;
+}
+
+#myBar {
+    transition: 0.5s;
+	width: 0%;
+	height: 30px;
+	background-color: var(--azul_claro);
+    border-radius: 20px;
+}
+
+#myBar p {
+    display: flex;
+    justify-content: end;
+    color: var(--azul_escuro);
+    padding-right: 10px;
+}
+
+footer {
+    background-color: var(--azul_claro);
+    padding: 2em 0;
+}
+
+footer section {
+    width: 80%;
+    margin: auto;
+    padding: 0.5em;
+    background-color: var(--azul_escuro);
+    border-radius: 30px;
+    color: whitesmoke;
+}
+
+footer section div {
+    margin: 1em;
+}
+
+footer img{
+    height: 3rem;
+}
+
+footer img:hover{
+    transition: 0.5s;
+    height: 3.3rem;
+}
+
+#logoInsta {
+    width: 3rem;
+    margin: auto;
+}
+
+
+/*breakpoints*/
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+    /*navbar*/
+    iframe {
+        
+        width: 300px;
+        height: 170px;
+        
+    }
+}

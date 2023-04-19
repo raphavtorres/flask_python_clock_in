@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./css/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+    <style>
+        @font-face {
+            font-family: 'Coves';
+            src: url(../fonts/Coves-Bold/Coves\ Bold.otf);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /*Cores*/
+        :root {
+            --preto: #000;
+            --azul_escuro: #04345C;
+            --azul_claro: #6BD4CD;
+            --roxo_detalhe: #BF46A0;
+        }
+        /*body*/
+
+        html {
+            font-size: calc(16px + 0.390625vw);
+        }
+
+        body {
+            /* background-color: var(--verde_escuro); */
+            font-family: 'Coves';
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        /*navbar*/
+        .navbar {
+            transition: 0.4s;
+            /* background-color: #3c5e45cb; */
+            --bs-navbar-padding-y: 0.3rem;
+        }
+
+        .navbar-toggler-icon {
+            display: flex;
+            width: 1.5em;
+            height: 1.5em;
+            vertical-align: middle;
+            background-image: url(../images/icone-menu.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100%;
+        }
+        .ativo {
+            text-decoration: underline;
+            color: var(--roxo_detalhe)!important;
+        }
+
+        .navbar-nav a {
+            color: var(--azul_escuro);
+        }
+
+        .navbar-nav a:hover {
+            color: var(--roxo_detalhe);
+        }
+
+
+
+        /* Cabeçalho */
+        #section_header{
+            padding: 1em;
+            display: flex;
+            align-items: center;
+            background-color: var(--azul_escuro);
+        }
+
+        .ano_aluno{
+            font-size: 18px;
+            color: rgb(179, 179, 179) !important;
+        }
+
+        #section_header p{
+            color: whitesmoke;
+        }
+
+        #img_perfil_estudante {
+            margin-right: 1em;
+            background-color: var(--azul_claro);
+            border-radius: 50%;
+            height: 60px;
+        }
+
+        .titulo_materia {
+            display: flex;
+            justify-content: center;
+        }
+
+        /*Carrossel*/
+        .img-carrossel {
+            object-fit: cover;
+            height: 23rem;
+            width: 100%;
+        }
+
+        #news_carrossel {
+            display: flex;
+            justify-content: center;
+            margin: 1em 0;
+        }
+
+
+        /* Playlists */
+        .playlist{
+            width: 16rem;
+            margin: 1em;
+        }
+
+        .playlist img{
+            height: 10rem;
+            object-fit: cover;
+        }
+
+        /*iframes*/
+
+        iframe {
+            transition: 0.5s;
+            width: 400px;
+            height: 220px;
+        }
+
+        .videos div {
+            margin: 1em 2em;
+        }
+
+        input[type=checkbox] {
+            position: relative;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            border: solid;
+            border-radius: 50%;
+        }
+
+        /*Pare da ProgressBar*/
+
+        #myProgress{
+            margin: auto;
+            width: 50%;
+            background-color: rgb(161, 161, 161);
+            border-radius: 20px;
+        }
+
+        #myBar {
+            transition: 0.5s;
+            width: 0%;
+            height: 30px;
+            background-color: var(--azul_claro);
+            border-radius: 20px;
+        }
+
+        #myBar p {
+            display: flex;
+            justify-content: end;
+            color: var(--azul_escuro);
+            padding-right: 10px;
+        }
+
+        footer {
+            background-color: var(--azul_claro);
+            padding: 2em 0;
+        }
+
+        footer section {
+            width: 80%;
+            margin: auto;
+            padding: 0.5em;
+            background-color: var(--azul_escuro);
+            border-radius: 30px;
+            color: whitesmoke;
+        }
+
+        footer section div {
+            margin: 1em;
+        }
+
+        footer img{
+            height: 3rem;
+        }
+
+        footer img:hover{
+            transition: 0.5s;
+            height: 3.3rem;
+        }
+
+        #logoInsta {
+            width: 3rem;
+            margin: auto;
+        }
+
+
+        /*breakpoints*/
+
+        /* Medium devices (tablets, 768px and up) */
+        @media (max-width: 768px) {
+            /*navbar*/
+            iframe {
+                
+                width: 300px;
+                height: 170px;
+                
+            }
+        }
+    </style>
+    <title>PROJETO GLART</title>
+</head>
+
+<body>
+    <!--Menu-->
+    <header id="section_header">
+        <div><img src="images/aluno.png" alt="" id="img_perfil_estudante"></div>
+        <div>
+            <p>Raphael Chaplin da Silva</p>
+            <p class="ano_aluno">3º Ano do Ensino Médio</p>
+        </div>
+        
+    </header>
+    <nav class="navbar navbar-expand-md bg-light">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <span class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <!--Links menu-->
+                    <a class="nav-link ativo" href="index.html">Home</a>
+                    <a class="nav-link" href="mat.html">Matemática</a>
+                    <a class="nav-link" href="hist.html">História</a>
+                    <a class="nav-link disabled" href="#">Potuguês</a>
+                    <a class="nav-link disabled" href="#">Biologia</a>
+                    <a class="nav-link disabled" href="#">Química</a>
+                    <a class="nav-link disabled" href="#">Física</a>
+                    <a class="nav-link disabled" href="#">Geografia</a>
+                    <a class="nav-link disabled" href="#">Filosofia</a>
+                    <a class="nav-link disabled" href="#">Sociologia</a>
+                </div>
+            </span>
+        </div>
+    </nav>
+
+    <main>
+        <section id="sect_carrossel">
+            <div id="news_carrossel">
+                <h1>NEWS</h1>
+            </div>
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="images/img1carrossel.png" class="d-block img-carrossel" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/img2carrossel.png" class="d-block img-carrossel" alt="...">
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden"></span>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <section>
+            <div class="d-flex justify-content-center">
+                <h2>Equipe</h2>
+            </div>
+            <div class="d-flex">
+                <div>
+                    <p>Arthur Matheus Almeida do Santos</p>
+                    <p>Geovanna Neres Andrade</p>
+                    <p>Leonardo Dos Santos Moreira</p>
+                    <p>Raphael Valderrama Torres</p>
+                    <p>Thiago Augusto Reis</p>
+                </div>
+                <div id="logoInsta"><a href="https://www.instagram.com/glartmoments/"><img src="images/instagram.png" alt=""></a></div>
+            </div>
+        </section>
+    </footer>
+
+    
+    <script src="./js/bootstrap.min.js"></script>
+</body>
+
+</html>
